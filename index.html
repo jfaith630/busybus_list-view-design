@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/58fb75ccf4.js" crossorigin="anonymous"></script>
   </head>
   <body>
     <section class="container">
@@ -15,92 +16,149 @@
         <img class="status-bar-img" src="images/Ellipse.png" alt="">
         <img class="status-bar-img" src="images/Polygon.png" alt="">
       </div>
-      <div class="app-bar-top">
-        <img src="images/back-arrow.png" alt="back arrow">
-        <img class="bus-icon-img" src="images/bus-icon.png" alt="bus-icon">
+      <nav class="app-bar-top">
+        <i class="fas fa-arrow-left"></i>
+        <i id="bus-icon" class="fas fa-bus"></i>
         <h1 class="bus-station">State & Washington</h1>
-        <img class="search-icon-img" src="images/search-icon.png" alt="search icon">
-        <img src="images/three-dots-vertical.png" alt="more options">
-      </div>
-      <div class="scroll-container">
-        <div class="map">
-          <img class="map-img" src="images/map.png" alt="map-image">
-        </div>
-        <div class="list-container">
-          <h2 class="subheader">Next Arrival</h2>
-          <div class="list-item">
+        <i class="fas fa-search"></i>
+        <i class="fas fa-ellipsis-v"></i>
+      </nav>
+      <header class="map">
+        <img class="map-img" src="images/map.png" alt="map-image">
+      </header>
+      <article class="list-container">
+        <h2 class="subheader">Next Arrival</h2>
+        <ol class="bus-list">
+          <li class="list-item">
             <div class="bus-route-icon">124</div>
-            <h3 class="bus-route-destination">Navy Pier - South</h3>
+            <div class="route-data-box">
+              <h3 class="bus-route-destination">Navy Pier</h3>
+              <div class="direction-frequency">Southbound • Every 10 min</div>
+            </div>
             <div class="arrival-time-box">
               <div class="arrival-time">6:38 AM</div>
               <div class="time-to-arrival">8 min</div>
             </div>
-            <img src="images/arrow.png" alt="more details">
-          </div>
+            <i id="chevron-right" class="fas fa-chevron-right"></i>
+          </li>
           <div class="partial-bottom-border"></div>
-          <div id="alt-color" class="list-item">
+          <li id="alt-color" class="list-item">
             <div class="bus-route-icon">124</div>
-            <h3 class="bus-route-destination">Navy Pier - East</h3>
+            <div class="route-data-box">
+              <h3 class="bus-route-destination">Navy Pier</h3>
+              <div class="direction-frequency">Eastbound • Every 10 min</div>
+            </div>
             <div class="arrival-time-box">
               <div class="arrival-time">6:40 AM</div>
               <div class="time-to-arrival">10 min</div>
             </div>
-            <img src="images/arrow.png" alt="more details">
-          </div>
+            <i id="chevron-right" class="fas fa-chevron-right"></i>
+          </li>
           <div class="partial-bottom-border"></div>
-          <div class="list-item">
+          <li class="list-item">
             <div class="bus-route-icon">60</div>
-            <h3 class="bus-route-destination">Randolph/Harbor Dr</h3>
+            <div class="route-data-box">
+              <h3 class="bus-route-destination">Randolph/Harbor Dr</h3>
+              <div class="direction-frequency">Eastbound • Every 20 min</div>
+            </div>
             <div class="arrival-time-box">
               <div class="arrival-time">6:50 AM</div>
               <div class="time-to-arrival">20 min</div>
             </div>
-            <img src="images/arrow.png" alt="more details">
-          </div>
+            <i id="chevron-right" class="fas fa-chevron-right"></i>
+          </li>
           <div class="partial-bottom-border"></div>
-          <div  id="alt-color" class="list-item">
+          <li  id="alt-color" class="list-item">
             <div class="bus-route-icon">151</div>
-            <h3 class="bus-route-destination">Devon/Clark</h3>
+            <div class="route-data-box">
+              <h3 class="bus-route-destination">Devon/Clark</h3>
+              <div class="direction-frequency">Northbound • Every 16 min</div>
+            </div>
             <div class="arrival-time-box">
               <div class="arrival-time">6:56 AM</div>
               <div class="time-to-arrival">16 min</div>
             </div>
-            <img src="images/arrow.png" alt="more details">
-          </div>
+            <i id="chevron-right" class="fas fa-chevron-right"></i>
+          </li>
           <div class="partial-bottom-border"></div>
-          <div class="list-item">
+          <li class="list-item">
             <div class="bus-route-icon">J14</div>
-            <h3 class="bus-route-destination">103rd/Stony Island</h3>
+            <div class="route-data-box">
+              <h3 class="bus-route-destination">103rd/Stony Island</h3>
+              <div class="direction-frequency">Southbound • Every 15 min</div>
+            </div>
             <div class="arrival-time-box">
               <div class="arrival-time">6:57 AM</div>
               <div class="time-to-arrival">15 min</div>
             </div>
-            <img src="images/arrow.png" alt="more details">
-          </div>
+            <i id="chevron-right" class="fas fa-chevron-right"></i>
+          </li>
           <div class="partial-bottom-border"></div>
-          <div id="alt-color" class="list-item">
-            <div class="bus-route-icon">6x</div>
-            <h3 class="bus-route-destination">Jackson Park Express</h3>
+          <li id="alt-color" class="list-item">
+            <div id="reroute-icon" class="bus-route-icon">6x</div>
+            <div class="route-data-box">
+              <h3 class="bus-route-destination">Jackson Park Express</h3>
+              <div class="direction-frequency">Reroute</div>
+            </div>
             <div class="arrival-time-box">
-              <div class="arrival-time">7:00 AM</div>
+              <div class="arrival-time">T.B.D.</div>
               <div class="time-to-arrival"></div>
             </div>
-            <img src="images/arrow.png" alt="more details">
-          </div>
+            <i id="chevron-right" class="fas fa-chevron-right"></i>
+          </li>
           <div class="partial-bottom-border"></div>
-        </div>
-      </div>
+          <li class="list-item">
+            <div id="out-of-service-icon" class="bus-route-icon">4</div>
+            <div class="route-data-box">
+              <h3 class="bus-route-destination">Cottage Grove</h3>
+              <div class="direction-frequency">Currently Out of Service</div>
+            </div>
+            <div class="arrival-time-box">
+              <div class="arrival-time">12:10 AM</div>
+              <div id="resume-time-recolor" class="time-to-arrival">Resume time</div>
+            </div>
+            <i id="chevron-right" class="fas fa-chevron-right"></i>
+          </li>
+          <div class="partial-bottom-border"></div>
+          <li id="alt-color" class="list-item">
+            <div id="out-of-service-icon" class="bus-route-icon">20</div>
+            <div class="route-data-box">
+              <h3 class="bus-route-destination">Madison</h3>
+              <div class="direction-frequency">Currently Out of Service</div>
+            </div>
+            <div class="arrival-time-box">
+              <div class="arrival-time">12:10 AM</div>
+              <div id="resume-time-recolor" class="time-to-arrival">Resume time</div>
+            </div>
+            <i id="chevron-right" class="fas fa-chevron-right"></i>
+          </li>
+          <div class="partial-bottom-border"></div>
+          <li class="list-item">
+            <div id="out-of-service-icon" class="bus-route-icon">157</div>
+            <div class="route-data-box">
+              <h3 class="bus-route-destination">Streeterville/Taylor</h3>
+              <div class="direction-frequency">Currently Out of Service</div>
+            </div>
+            <div class="arrival-time-box">
+              <div class="arrival-time">6:00 AM</div>
+              <div id="resume-time-recolor" class="time-to-arrival">Resume time</div>
+            </div>
+            <i id="chevron-right" class="fas fa-chevron-right"></i>
+          </li>
+          <div class="partial-bottom-border"></div>
+        </ol>
+      </article>
       <div id="overflow-fix"></div>
       <div class="app-bar-bottom">
-        <img src="images/home-icon.png" alt="home">
-        <img src="images/list-icon.png" alt="schedule">
-        <img src="images/star-icon.png" alt="saved">
-        <img src="images/alert-icon.png" alt="alerts">
+        <i class="fas fa-home"></i>
+        <i class="fas fa-list"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-exclamation-triangle"></i>
       </div>
       <div class="android-nav-bar">
         <img src="images/back-triangle.png" alt="home">
-        <img src="images/open-circle.png" alt="home">
-        <img src="images/open-square.png" alt="home">
+        <i class="far fa-circle"></i>
+        <i class="far fa-square"></i>
       </div>
     </section>
   </body>
